@@ -7,7 +7,7 @@ jobs:
   Build-Kernel:
     strategy:
       fail-fast: false
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     permissions:
       contents: read
 
@@ -15,16 +15,20 @@ jobs:
       - name: Build Kernel
         uses: dabao1955/kernel_build_action@main
         with:
-          kernel-url: https://github.com/AcmeUI-Devices/android_kernel_xiaomi_cas
+          kernel-url: https://github.com/ZinerX/android_kernel_oneplus_sm8250
           kernel-dir: msm-4.19
-          kernel-branch: taffy
-          config: cas_defconfig
+          kernel-branch: oneplus/sm8250_u_14.0.0_op9r
+          config: lito_perf_defconfig
           arch: arm64
-          aosp-gcc: true
           aosp-clang: true
           ksu: true
-          ksu-version: main
-          android-version: 12
-          aosp-clang-version: r383902
+          ksu-version: v0.9.5
+          android-version: 14
+          aosp-clang-version: r487747c
           disable-lto: true
-          anykernel3: true
+          anykernel3: false
+          vendor: true
+          vendor-url: https://github.com/OnePlusOSS/android_kernel_modules_and_devicetree_oneplus_sm8250
+          vendor-dir: vendor
+          vendor-branch: oneplus/sm8250_u_14.0.0_op9r
+          aosp-gcc: true
