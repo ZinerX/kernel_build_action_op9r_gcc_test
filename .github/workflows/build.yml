@@ -18,7 +18,7 @@ jobs:
           kernel-url: https://github.com/ZinerX/android_kernel_oneplus_sm8250
           kernel-dir: kernel
           kernel-branch: oneplus/sm8250_u_14.0.0_op9r
-          config: vendors/lito_perf_defconfig
+          config: vendors/lito-perf_defconfig
           arch: arm64
           aosp-clang: true
           ksu: true
