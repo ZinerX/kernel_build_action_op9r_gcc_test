@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Build Kernel
-        uses: dabao1955/kernel_build_action@main
+        uses: ZinerX/kernel_build_action_op9r_gcc_test@main
         with:
           kernel-url: https://github.com/ZinerX/android_kernel_oneplus_sm8250
           kernel-dir: msm-4.19
