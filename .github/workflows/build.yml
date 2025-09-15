@@ -25,3 +25,4 @@ jobs:
           disable-lto: true
           anykernel3: false
           aosp-gcc: true
+          extra-cmd: LLVM_IAS=1 LLVM=-14
