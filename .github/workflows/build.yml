@@ -16,7 +16,6 @@ jobs:
         uses: ZinerX/kernel_build_action_op9r_gcc_test@main
         with:
           kernel-url: https://github.com/ZinerX/android_kernel_oneplus_sm8250
-          kernel-dir: kernel
           kernel-branch: oneplus/sm8250_u_14.0.0_op9r
           config: vendor/lito-perf_defconfig
           arch: arm64
